@@ -1,7 +1,13 @@
 import { Router } from "express";
+import {
+  verifyTokenAndAdmin,
+  verifyTokenAndAuthorization,
+} from "../controller/jwtVerify.controller.js";
+import {} from "../controller/user.controller.js";
+import { addProduct } from "../controller/product.controller.js";
 
-const router = Router();
+const productRouter = Router();
 
+productRouter.post("/", verifyTokenAndAdmin, addProduct);
 
-
-export default router;
+export default productRouter;

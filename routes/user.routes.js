@@ -21,4 +21,3 @@ userRouter.delete("/:id", verifyTokenAndAdmin, deleteUser);
 userRouter.get("/:id", verifyTokenAndAdmin, getUserById);
 
 export default userRouter;
-
